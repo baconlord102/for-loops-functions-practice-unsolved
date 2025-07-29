@@ -9,7 +9,9 @@
  * */
 
 export function getAverage(array) {
-  // Your code goes here...
+  if (array.length === 0) return 0;
+  const sum = array.reduce((acc, num) => acc + num, 0);
+  return sum / array.length;
 
 }
 
@@ -22,7 +24,12 @@ export function getAverage(array) {
  * */ 
 
 export function getStringSum(str) {
-  // Your code goes here...
+  let sum = 0;
+  for (let char of str) {
+    if (!isNaN(char) && char !== ''){
+      
+    }
+  }
 
 }
 
