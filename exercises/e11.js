@@ -5,9 +5,23 @@
 // getAllWithdrawals(bankAccounts) => [3432, 0, 43242.34, 0, 23432]
 
 export function getAllWithdrawals(array) {
-  // Your code goes here...
+let result = [];
 
+for (let i= 0; i < array.length; i++) {
+let account = array [i];
+let sum = 0;
+
+if (account.withdrawals && account.withdrawals.length > 0) {
+  for (let j = 0; j < account.withdrawals.length; j++) {
+      sum += account.withdrawals [j];
+  }
 }
+result.push(sum);
+}
+
+return result;
+}
+
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-11"

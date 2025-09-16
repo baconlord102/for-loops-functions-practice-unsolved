@@ -9,12 +9,14 @@
  * */
 
 export function getAverage(array) {
-  if (array.length === 0) return 0;
-  const sum = array.reduce((acc, num) => acc + num, 0);
+  let sum = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    sum += array [i];
+  }
+
   return sum / array.length;
-
 }
-
 
 /** 
  * PART 2
@@ -25,14 +27,17 @@ export function getAverage(array) {
 
 export function getStringSum(str) {
   let sum = 0;
-  for (let char of str) {
-    if (!isNaN(char) && char !== ''){
-      
+
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+
+    if (!isNaN(char) && char !== "") {
+      sum += Number (char);
     }
   }
 
+  return sum;
 }
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-3"
